@@ -52,6 +52,18 @@ function calcPrice () {
         }
     }
 
+    if(ceiling.checked){
+        totalPrice = totalPrice * parseFloat(ceiling.value)
+    }
+
+    if(walls.checked){
+        totalPrice = totalPrice * parseFloat(walls.value)
+    }
+
+    if(floor.checked){
+        totalPrice = totalPrice * parseFloat(floor.value)
+    }
+
 
     const formater = new Intl.NumberFormat('ru')
     totalPriseAlemant.innerText = formater.format(totalPrice);
